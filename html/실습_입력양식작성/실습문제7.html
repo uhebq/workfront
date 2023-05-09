@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>실습문제7</title>
+</head>
+<body>
+    
+    <h1>주문하기</h1>
+    <form>
+        <p><label for='name'>고객명 : <input type='text' name='name' autofocus required></label></p>
+        <p><label for='tel'>전화번호 : <input type='tel' name='phone' required></label></p>
+        <label>E-mail : <input type='tel' name='phone' required></label>      
+        
+    <fieldset>
+        <legend>피자사이즈</legend>
+            <input type="radio" name='size' id='size_s' value='small'>
+            <!-- 라벨을 붙여주어 라벨이 선택되어도
+                 요소가 선택된 것과 같은 효과를 줄 수 있다.-->
+            <label for='size_s'>Small</label>
+            <p><input type="radio" name='size' id='size_m' value='medium'>
+            <label for='size_m'>Medium</label></p>
+            <input type="radio" name='size' id='size_l' value='large' checked>
+            <label for='size_l'>Large</label>
+    </fieldset>
+
+    <fieldset>
+        <legend>토핑 선택</legend>
+        <input type="checkbox" name='topping' value='bacon'>베이컨
+        <p><input type="checkbox" name='topping' value='cheese'>치즈</p>
+        <p><input type="checkbox" name='topping' value='onion'>양파</p>
+        <input type="checkbox" name='topping' value='mushroom'>버섯
+    </fieldset>
+
+    희망 배송 일 : <input type="date" name='date' id='date' required>
+    <p>희망 배송 시간 : <input type="time" name='time' id='time' required></p>
+    <p>배송 시 요청사항 : <textarea name='tarea' cols='18' rows='2'></textarea></p>
+    <p><input type="submit" value='주문하기'></p>
+    </form>
+</body>
+</html>

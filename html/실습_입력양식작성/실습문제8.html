@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <fieldset>
+        <legend>납품자 정보</legend>
+        <ol>
+        <li><label for="name">납품자명 : <input type='text' name='name' id='name' placeholder='name' required></label></li><br>
+        <li><label for='email'>email : <input type='email' name='email' id='email' placeholder='answer@naerm.com' required></label></li><br>
+        <li><label for='url'>홈페이지 : <input type='url' name='url' id='url' value='http://' required></label></li>
+        </ol>
+    </fieldset>
+    <fieldset>
+        <legend>납품정보</legend>
+        <ul>
+            <p><li><label for="pName"> 상품명 : <input type='text' name='pName' id='pName'></label></li></p>
+            <p><li><label for='pAmount'> 납품수량 : <input type='number' name='pAmount' id='pAmount' min='100' placeholder='최소 100'></label></li></p>
+            <p><li><label for='pGrade'> 납품등급 : <input type='range' name='pGrade' id='pGrade'
+                min='0' max='1000' step='100' value='500'></label></li></p>
+            <p><li> 기타사항 : <textarea name='tarea' cols='20' rows='2'></textarea></p>
+        </ul>
+    </fieldset>
+    
+    <p><input type="submit" value='send message'> </li></p>
+
+</body>
+</html>
