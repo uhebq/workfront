@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 선택자 우선순위</title>
+</head>
+<style>
+    /* 구글 폰트 */
+    @import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
+
+    h1{
+        color: yellow;
+        font-family: 'Nanum Pen Script', cursive;
+    }
+    h1{
+        color: blueviolet;
+        background-color: aquamarine;
+    }
+    #test1{
+        background-color: pink;
+    }
+    .pinkBg{
+        background-color: firebrick;
+    }
+    p{
+        /* background-color: red !important; */
+        /* color : aliceblue !important; */
+        font-size: 2em;
+    }
+
+    .red{
+        color: red;
+        font-weight: 800;
+    }
+    
+</style>
+<body>
+    <h1>선택자 우선순위</h1>
+    
+    <p>
+        기본적으로 위에서 아래로 적용
+        같은 요소에 다양한 선택자로 CSS속성이 설정된 경우
+        우선 순위에 따라 스타일이 적용된다.<br>
+        <span class='red'>
+            태그 선택자 < 클래스 선택자 < 아이디 선택자 < 인라인 선택자 < important
+        </span>
+    </p>
+
+    <div id='test1' class='pinkBg' style='background-color: olive;'>우선순위 테스트</div>
+    <p id='test2'>우선순위 테스트</p>
+
+</body>
+</html>
