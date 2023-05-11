@@ -15,6 +15,7 @@
 
     /* 웹폰트 */
     h1{
+        color: yellow;
         font-family: 'Nanum Pen Script', cursive;
     }
     .web-font{
@@ -98,6 +99,7 @@
         /*
             hsl 방식
             색상(hue)
+            색상(hue), 채도(saturation), 밝기(light)
         */
         color: rgba(255,0,0,0.253);
         background-color: hwb(214 72% 6%);
@@ -154,4 +156,38 @@
     }
     #tt4{
         text-transform: lowercase;
+    }
+
+    .lh1{
+        font-size: 1em;
+        line-height: 1em;
+        text-align: left;
+    }
+    .lh2{
+        font-size: em;
+        line-height: 2em;
+        text-align: right;
+    }
+    .lh3{
+        font-size: em;
+        line-height: 0.3em;
+        text-align: center;
+    }
+    .lh4{
+        font-size: em;
+        line-height: 3em;
+        text-align: justify;
+    }
+
+    table{
+        /* 캡션의 위치 (기본값 : top) */
+        caption-side: bottom;
+
+        border:1px solid #999;
+        /* 테두리를 한줄로 표시 */
+        border-collapse: collapse;   
+    }
+
+    th, tr, td{
+        border: 1px dotted #666;
     }
