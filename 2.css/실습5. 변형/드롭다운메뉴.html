@@ -14,18 +14,32 @@
             color: #333;
             box-sizing: border-box;
         }
-        nav .menu {
+
+        /* overflow hidden의 위치가 잘못됨 
+        메뉴의 높이가 지정이 되지 않아서 세로 메뉴에서 
+        발견되지 않았지만 높이가 지정 되면 오류발생...
+        */
+        /* .menu {
+            overflow: hidden;
+            border: 1px solid;
+        } */
+        /* 서브메뉴 숨김 */
+        
+        nav .menu .submenu {
             /* 부모영역을 벗어나면 숨김처리 */
             overflow: hidden;
         }
 
         nav .menu li{
-            float: left;
             width: 200px;
             /* 하위메뉴 겹침 현상으로 height 는 빼줌 */
             /* height: 30px; */
             background-color: cornflowerblue;
+            /* + 위치가 li요소 안에 위치하도록 */
             position: relative;
+
+            /* 가로메뉴/세로메뉴 */
+            float: left;
         }
 
         nav .menu li a{
@@ -42,13 +56,10 @@
         }
 
         nav .menu li a:hover{
-            background-color: cadetblue;
+            background-color: darkblue;
             color: white;
         }
 
-        nav .menu li a:hover span{
-            transform: rotate(45deg);
-        }
         /* + : 형제 요소 선택 */
         /* 우선순위에 의해 인라인스타일 > id스타일 > class스타일 > 태그스타일 */
         nav .menu li a:hover + .submenu, nav .menu li .submenu:hover{
@@ -69,19 +80,23 @@
             /* 천천히 나오도록 */
             transition: 1s;
         }
-
-        nav .menu .submenu li{
-            padding-left: 20px;
+        
+        nav .menu li a:hover span{
+            transform: rotate(45deg);
         }
+        nav .menu .submenu li {
+            padding-left: 20px;
+            /* border :1px solid orange; */
+        }
+
         nav .menu .submenu li a{
             font-size: 1em;
-            font-weight: 700;
+            font-family: 700;
         }
-
-        .menu li a span{
+        nav .menu li a span{
             position: absolute;
             right: 10px;
-            color: black;
+            color: white;
             transition: 1s;
         }
     </style>
@@ -95,6 +110,7 @@
                 <li><a href='#'>메뉴1</a></li>
                 <li><a href='#'>메뉴2<span>+</span></a>
                     <ul class='submenu'>
+                        <!-- 서브메뉴 -->
                         <li><a href='#'>서브메뉴2-1</a></li>
                         <li><a href='#'>서브메뉴2-2</a></li>
                         <li><a href='#'>서브메뉴2-3</a></li>
@@ -104,6 +120,7 @@
                 <li>
                     <a href='#'>메뉴3<span>+</span></a>
                     <ul class='submenu'>
+                        <!-- 서브메뉴 -->
                         <li><a href='#'>서브메뉴3-1</a></li>
                         <li><a href='#'>서브메뉴3-2</a></li>
                         <li><a href='#'>서브메뉴3-3</a></li>
