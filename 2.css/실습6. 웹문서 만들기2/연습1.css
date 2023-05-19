@@ -23,7 +23,7 @@ header .logo{
     color: white;
     /* background-color: burlywood; */
     border: 1px solid gainsboro;
-    
+    margin-bottom: 3px;    
 }
 header .logo .logo_left{
     float: left;
@@ -59,11 +59,16 @@ header nav ul{
     padding: 0px;
     margin-top: 5px;
 }
+.search{
+    border: 1px solid gainsboro;
+    width: 100%;
+    height: 61px;
+}
 header nav ul li{
     width: 20%;
     height: 50px;
     /* background-color: whitesmoke; */
-    border: 1px solid gainsboro;
+    /* border: 1px solid gainsboro; */
     float: left;
     
     
@@ -88,36 +93,59 @@ main{
 main #leftSide {
     width: 74%;
     float: left;
-    margin-top: 5px;
+    margin-top: 8px;
     
 }
 
 main #leftSide img{
     width: 100%;
     border: 1px solid gainsboro;
-    
 }
 main #leftSide #notice{
     font-size: 15px;
     height: 40px;
-    line-height: 40px;
+    /* line-height: 40px; */
     border: 1px solid gainsboro;
-    margin-bottom: 5px;
+    /* margin-bottom: 5px; */
+    width: 100%;
+    /* background-color: aqua; */
+    float: left;
+    padding: 8px;
+    margin-bottom: 3px;
 }
-main #leftSide #notice p{
-    margin-left: 20px;
+main #leftSide #notice .div1{
+    float: left;
+    /* width: 75%; */
+    /* background-color: aqua; */
+    /* border: 1px solid rgb(253, 122, 113); */
 }
+main #leftSide #notice .div2{
+    float: right;
+    /* width: 25%; */
+    /* border: 1px solid rgb(224, 63, 34); */
+    /* color: red; */
+    /* background-color: blue; */
+}
+main #leftSide #notice .div2 ul{
+    margin: 0;
+    padding: 0;
+}
+main #leftSide #notice .div2 li{
+    /* border: 1px solid black; */
+    float: left;
 
-main #leftSide #notice p span{
-    color: red;
-    text-align: right;
 }
-
+main #leftSide #notice .div2 a{
+    float: left;
+    /* border: 1px solid black; */
+    padding: 0px 8px;
+    
+}
 main #rightSide{
     width: 25%;
     float: left;
     margin-left: 1%;
-    margin-top: 5px;
+    margin-top: 8px;
 }
 
 #login_wrap{

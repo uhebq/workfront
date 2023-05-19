@@ -1,0 +1,198 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+#container{
+    width: 1200px;
+    height: 700px;
+    margin: 0% auto;
+}
+
+header{
+    width: 100%;
+    height: 160px;
+    background-color: royalblue;
+}
+header #logo{
+    font-size: 25px;
+    width: 300px;
+    height: 100px;
+    margin-top: 40px;
+    margin-left: 20px;
+    float: left;    
+}
+header #logo h1{
+    color: white;
+}
+
+header #topMenu{
+    width: 800px;
+    height: 50px;
+    margin-top: 110px;
+    float: left;
+}
+
+nav{
+    float: left;
+}
+
+nav #topMenu #subMenu{
+    overflow: hidden;
+}
+nav #topMenu li{
+    width: 200px;
+    position: relative;
+
+    /* 가로메뉴/세로메뉴 */
+    float: left;
+}
+
+nav #topMenu li a{
+    display: inline-block;
+    width: 100%;
+    line-height: 30px;
+    color: white;
+    font-size: 1.2em;
+    font-weight: 700;
+
+    text-align: center;
+}
+
+nav #topMenu li a:hover + #subMenu, nav #topMenu li #submenu:hover{
+    max-height: 100px;
+}
+
+nav #topMenu #subMenu{
+    max-height: 0px;
+    transition: 0.5s;
+}
+
+#slideShow{
+    /* background-color: moccasin; */
+    width: 1200px;
+}
+#contents{
+    /* background-color: burlywood; */
+    width: 1200px;
+    height: 370px;
+}
+
+#tabMenu input[type=radio]{
+    display: none;
+}
+#tabMenu label{
+    display: inline-block;
+    padding: 20px;
+    margin: 0px;
+    font-weight: 600;
+    color: #ccc;
+    height: 60px;
+}
+
+#tabMenu label:hover{
+    color: black;
+}
+#tabMenu input:checked + label{
+    border: 1px solid #ccc;
+    background-color: #eee;
+    color: darkred;
+}
+
+.tabContent{
+    display: none;
+    border-top: 1px solid #ccc;
+    padding: 10px 20px;
+    line-height: 2;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 59px;
+}
+
+#tab1:checked ~ #notice
+, #tab2:checked ~ #gallery{
+    display: block;
+}
+
+#contents{
+    width: 1200px;
+}
+#tabMenu{
+    width: 550px;
+    height: 40px;
+    position: relative;
+    float: left;
+}
+#gallery li img{
+    width: 50px;
+}
+#links{
+    width: 600px;
+    height: 200px;
+    flex-direction: row;
+    float: left;
+    margin-top: 40px;
+}
+
+#links li{
+    /* padding: 40px;
+    margin-top: 50px; */
+    width: 200px;
+    height: 100%;
+    float: left;
+    text-align: center;
+}
+
+#links img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+#gallery ul li{
+    display: inline;
+}
+
+#gallery ul li img{
+    width: 165px;
+}
+
+
+footer{
+    /* background-color: aquamarine; */
+    width: 1200px;
+    height: 150px;
+    border-top: 4px solid black;
+}
+
+footer #bottomMenu{
+    font-size: 20px;
+
+}
+footer #bottomMenu li{
+    border-right: 1px solid black;
+    width: 200px;
+    height: 50px;
+    line-height: 50px;
+    float: left;
+    text-align: center;
+    margin-top: 20px;
+    color: black;
+}
+footer #company{
+    width: 700px;
+    height: 50px;
+    line-height: 50px;
+    color: #ccc;
+    margin-left: 60px;
+}
+footer #sns{
+    text-align: end;
+}
+
+#bottomMenu li:last-child{
+    border-right: none;
+}
