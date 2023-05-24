@@ -120,7 +120,7 @@
     <button onclick="print()">출력</button>
 
     <script>
-    let data = [];
+    var data = [];
     function input(){
         let strInput = document.getElementById('strInput');
 
@@ -175,35 +175,40 @@
 	<button onclick="arrayTest3();">처리 및 출력</button>  
     
     <script>
-        let data = ['피자', '치킨', '당근', '햄버거', '떡볶이'];
         function arrayTest3(){
-            let strInput = document.getElementById('remove');
-            data.splice(remove.value)
+            // 보기에 입력된 문자열을 배열로 만들기
+            let str = document.getElementById("stringla4").innerHTML;
+            let arr = str.split(' ');
 
-            let strInput = document.getElementById('add');
-    
-            // 배열에 값을 저장
-            data.push(add.value);
-            console.log(data);
-    
-            // 초기화
-            add.value = '';
-    
+            // 텍스트필드에 입력된 값을 변수에 저장
+            let remove = document.getElementById('remove').value;
+            let add = document.getElementById('add').value;
+
+            // 삭제할 요소의 인덱스를 확인후 삭제
+            // 요소의 인덱스를 반환, 없으면 -1
+            let index = arr.indexOf(remove);
+            console.log(index);
+            if(index >= 0){
+                arr.splice(index, 1);
+            }
+
+            // for(let i=0; i<arr.length; i++){
+            //     if(arr[i] === remove){
+            //         arr.splice(i, 1);
+            //         break;
+            //     }
+            // }
+
+            // 추가할 요소를 배열을 맨 마지막에 추가
+            // 배열의 마지막에 요소를 추가
+            arr.push(add);
+
+            // 출력
+            let print4 = document.getElementById('print4');
+            print4.innerHTML = arr.join(' ');
+
         }
-    
-        function print(){
-            // console.log('print()')
-    
-            data.sort().reverse();
-    
-            // document.getElementById('print2').innerHTML = data.join();
-            let print2 = document.getElementById('print2')
-    
-            print2.innerHTML = data.join();
-    
-    
-        }
-        </script>
+    </script>
     
 </body>
 </html>
